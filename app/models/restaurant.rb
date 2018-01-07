@@ -7,7 +7,8 @@ class Restaurant < ApplicationRecord
 
 	private 
 	def primeira_letra_maiuscula
-		unless nam =~ /[A-Z].*/
+		unless name =~ /[A-Z].*/
 			errors.add(:name, "primeira letra deve ser maiúscula")
 		end
+	end
 end
