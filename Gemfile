@@ -44,6 +44,8 @@ group :development, :test do
   gem 'dotenv-rails'
   #A library for generating fake data such as names, addresses, and phone numbers. 
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+  # Factory Girl S2 Rails
+  gem 'factory_bot_rails'
   #tests
   gem "rspec-rails", "~> 3.1.0"
 end
