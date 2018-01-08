@@ -4,7 +4,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 # A Ruby static code analyzer, based on the community Ruby style guide.
 gem 'rubocop', require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,7 +46,7 @@ group :development, :test do
   # Factory Girl S2 Rails
   gem 'factory_bot_rails'
   # tests
-  gem 'rspec-rails', '~> 3.1.0'
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
