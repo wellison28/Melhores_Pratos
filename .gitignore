@@ -22,4 +22,4 @@
 .env
 
 # Ignore simplecove's coverage file
-/coverage
+coverage
