@@ -203,6 +203,20 @@
         null,
         null
       ],
+      "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/factories/dishes.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/factories/recipes.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/factories/restaurants.rb": [
         1,
         1,
@@ -239,6 +253,22 @@
         1,
         1,
         null
+      ],
+      "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/models/dish_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/wellison/estudoRuby/ruby/Melhores_Pratos/app/models/dish.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/models/recipe_spec.rb": [
+
       ],
       "/home/wellison/estudoRuby/ruby/Melhores_Pratos/spec/models/restaurant_spec.rb": [
         1,
@@ -282,6 +312,6 @@
         null
       ]
     },
-    "timestamp": 1515750829
+    "timestamp": 1515753358
   }
 }
