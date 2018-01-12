@@ -47,6 +47,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   # tests
   gem 'rspec-rails', '~> 3.7'
+  #Code coverage for Ruby 1.9+ with a powerful configuration library and 
+  #automatic merging of coverage across test suites 
+  gem 'simplecov', require: false
 end
 
 group :development do
