@@ -50,6 +50,8 @@ group :development, :test do
   # Code coverage for Ruby 1.9+ with a powerful configuration library and
   # automatic merging of coverage across test suites
   gem 'simplecov', require: false
+  #Collection of testing matchers extracted from Shoulda http://matchers.shoulda.io
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do

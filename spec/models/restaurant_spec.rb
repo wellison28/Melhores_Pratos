@@ -18,5 +18,7 @@ RSpec.describe Restaurant, type: :model do
       r = Restaurant.new name: 'Fasano', address: 'Rua Heliodoro'
       expect(r.valid?).to be_falsey
     end
+
+    it ''
   end
 end
