@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112103916) do
+ActiveRecord::Schema.define(version: 20180113103039) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", limit: 80
@@ -25,18 +25,31 @@ ActiveRecord::Schema.define(version: 20180112103916) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dishes_restaurants", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "dish_id"
+    t.bigint "restaurant_id"
+    t.index ["dish_id"], name: "index_dishes_restaurants_on_dish_id"
+    t.index ["restaurant_id"], name: "index_dishes_restaurants_on_restaurant_id"
+  end
+
   create_table "qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.float "score", limit: 24, null: false
     t.float "amount_spent", limit: 24
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "restaurant_id"
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_qualifications_on_customer_id"
+    t.index ["restaurant_id"], name: "index_qualifications_on_restaurant_id"
   end
 
   create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "dish_id"
+    t.index ["dish_id"], name: "index_recipes_on_dish_id"
   end
 
   create_table "restaurants", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -47,4 +60,7 @@ ActiveRecord::Schema.define(version: 20180112103916) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "qualifications", "customers"
+  add_foreign_key "qualifications", "restaurants"
+  add_foreign_key "recipes", "dishes"
 end

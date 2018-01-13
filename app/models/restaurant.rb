@@ -1,4 +1,7 @@
 class Restaurant < ApplicationRecord
+  has_many :qualifications
+  has_and_belongs_to_many :dishes
+
   validates_presence_of :name, message: ' - deve ser preenchido'
   validates_presence_of :address, message: ' - deve ser preenchido'
   validates_uniqueness_of :name, message: 'nome já cadastrado'
