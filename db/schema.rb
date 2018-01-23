@@ -12,12 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180115112514) do
 
-  create_table "categories_products", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "category_id", null: false
-    t.bigint "product_id", null: false
-    t.index ["category_id", "product_id"], name: "index_categories_products_on_category_id_and_product_id"
-  end
-
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", limit: 80
     t.integer "age"
@@ -29,6 +23,12 @@ ActiveRecord::Schema.define(version: 20180115112514) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dishes_restaurants", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "dish_id", null: false
+    t.bigint "restaurant_id", null: false
+    t.index ["dish_id", "restaurant_id"], name: "index_dishes_restaurants_on_dish_id_and_restaurant_id"
   end
 
   create_table "qualifications", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
