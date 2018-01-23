@@ -2,7 +2,7 @@ class Qualification < ApplicationRecord
 	belongs_to :customer
 	belongs_to :restaurant
 
-	validates_presence_of :score, message: " - deve ser preenchido"
+	validates :score, presence: true
 	validates_presence_of :customer_id, :restaurant_id
 	validates_associated :customer, :restaurant
 	

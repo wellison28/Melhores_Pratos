@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
-	belongs_to :dishes
+	belongs_to :dish
 
-  validates_presence_of :content, message: ' - deve ser preenchido'
-  validates_presence_of :dish_id
+  validates :content, presence: true
+  validates :dish_id, presence: true
   validates_associated :dish
 end
